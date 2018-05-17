@@ -1,0 +1,6 @@
+﻿namespace CommunicationModule
+{
+    class UDP
+    {
+    }
+}

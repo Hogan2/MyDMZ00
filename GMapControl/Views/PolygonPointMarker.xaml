@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="GMapControl.Views.PolygonPointMarker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Image Name="RedMarker" Source="imags/Green.png" HorizontalAlignment="Center" VerticalAlignment="Center"
+           RenderOptions.BitmapScalingMode="HighQuality"  UseLayoutRounding="True"/>
+        <!--<TextBlock Name="wayPointIndex" Width="12" Height="12" Foreground="Red" FontSize="9" Text="0" TextAlignment="Center" Margin="0,0,2,12"/>-->
+    </Grid>
+</UserControl>

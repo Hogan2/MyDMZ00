@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="GMapControl.Views.MyMapCtrlTest"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GMapControl.Views">
+    <Grid>
+        <local:MapCtrl PlaneAngle="{Binding ElementName=PlaneAngleSlider,Path=Value}"
+                       PlanePosition_Lat="{Binding ElementName=PlanePosition_LatSlider,Path=Value}"
+                       PlanePosition_Lng="{Binding ElementName=PlanePosition_LngSlider,Path=Value}"/>
+        <Grid  VerticalAlignment="Bottom" Width="200" HorizontalAlignment="Right">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Slider Name="PlaneAngleSlider" Minimum="-180" Maximum="180"
+                Value="0" TickFrequency="30" TickPlacement="BottomRight"/>
+            <Slider Name="PlanePosition_LatSlider" Grid.Row="1" Minimum="30.652" Maximum="30.729"
+                Value="30.6898" TickFrequency="0.005" TickPlacement="BottomRight" IsSnapToTickEnabled="False"/>
+            <Slider Name="PlanePosition_LngSlider" Grid.Row="2" Minimum="103.872" Maximum="104.035"
+                Value="103.9468" TickFrequency="0.01" TickPlacement="BottomRight"/>
+        </Grid>        
+    </Grid>
+</UserControl>

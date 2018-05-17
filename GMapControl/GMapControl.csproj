@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0D38787-C24F-488E-AC0B-2A5B8C0DBE39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMapControl</RootNamespace>
+    <AssemblyName>GMapControl</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Presentation.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Presentation.1.7.5\lib\net40\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Unity.Wpf, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Unity.6.3.0\lib\net45\Prism.Unity.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Wpf, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\Prism.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.6.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GMapControlModule.cs" />
+    <Compile Include="Models\CursorConvert.cs" />
+    <Compile Include="Models\ToolBarBorders.cs" />
+    <Compile Include="Models\ToolBarTitles.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\MapCtrlViewModel.cs" />
+    <Compile Include="ViewModels\MouseMonitorHelper.cs" />
+    <Compile Include="Views\Cursor_Route.xaml.cs">
+      <DependentUpon>Cursor_Route.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cursor_ZoomIn.xaml.cs">
+      <DependentUpon>Cursor_ZoomIn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cursor_ZoomOut.xaml.cs">
+      <DependentUpon>Cursor_ZoomOut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MapCtrl.xaml.cs">
+      <DependentUpon>MapCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Marker_Red.xaml.cs">
+      <DependentUpon>Marker_Red.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyMapCtrlTest.xaml.cs">
+      <DependentUpon>MyMapCtrlTest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Pin_Marker.xaml.cs">
+      <DependentUpon>Pin_Marker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Plane.xaml.cs">
+      <DependentUpon>Plane.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PolygonPointMarker.xaml.cs">
+      <DependentUpon>PolygonPointMarker.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\Cursor_Route.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Cursor_ZoomIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Cursor_ZoomOut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MapCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Marker_Red.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MyMapCtrlTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Pin_Marker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Plane.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PolygonPointMarker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\pin %285%29.png" />
+    <Resource Include="Views\imags\pin %284%29.png" />
+    <Resource Include="Views\imags\pin.png" />
+    <Resource Include="Views\imags\placeholder-red.png" />
+    <Resource Include="Views\imags\minus.png" />
+    <Resource Include="Views\imags\plus.png" />
+    <Resource Include="Views\imags\zoom-out_red.png" />
+    <Resource Include="Views\imags\zoom-in_red.png" />
+    <Resource Include="Views\imags\zoom-in.png" />
+    <Resource Include="Views\imags\zoom_in.png" />
+    <Resource Include="Views\imags\zoom_out.png" />
+    <Resource Include="Views\imags\pin4.png" />
+    <Resource Include="Views\imags\red-dot.png" />
+    <Resource Include="Views\imags\placeholder %281%29.png" />
+    <Resource Include="Views\imags\route.png" />
+    <Resource Include="Views\imags\ruler.png" />
+    <Resource Include="Views\imags\zoom-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\cursor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\circular-target.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\garbage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\trash-can.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\add_point.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\edit_point.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\delete_point.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\flight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\flight %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\map-location-pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\waypoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Views\imags\Green.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

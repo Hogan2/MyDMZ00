@@ -1,0 +1,32 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="MyHud.Views.MyHudCtrl"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <Ellipse x:Name="Grid_Virwport"
+                Width="180" 
+                Height="180" 
+                Stroke="Black" 
+                StrokeThickness="2">
+            <Ellipse.Fill>
+                <LinearGradientBrush MappingMode="Absolute">
+                    <GradientStop Color="#FF7D7DF9"/>
+                    <GradientStop Color="#FFAAD5E7" Offset="0.5"/>
+                    <GradientStop Color="#FF9AB724" Offset="0.5"/>
+                    <GradientStop Color="#FF6F8516" Offset="1"/>
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Polygon Points="0,0 10,0 5,11" Margin="0,5,0,0" Fill="DarkRed"
+                 HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Canvas x:Name="Canvas_ViewPortMiddle" Visibility="Visible" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Path 
+                Stroke="DarkRed" 
+                StrokeThickness="2" 
+                Data="M 0,0 H 28 M 34,5 L 52,0 L 70,5 M 76,0 H 104"
+                Margin="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,5 @@
+﻿<UserControl x:Class="GMapControl.Views.Cursor_Route"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Image Name="RedMarker" Source="imags/red-dot.png" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+</UserControl>
